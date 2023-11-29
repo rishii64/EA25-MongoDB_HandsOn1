@@ -1,0 +1,19 @@
+body{
+    height: 100vh;
+    overflow: hidden;
+    background: url("./mongo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+}
+h1{
+    text-align: center;
+}
+li{
+    font-weight: 600;
+    margin-top: 15px;
+}
+cite{
+    font-family: cursive;
+    margin: 0 5px 0 20px;
+}

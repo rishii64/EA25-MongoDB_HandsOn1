@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image" href="./mongo.png">
+    <title>HandsOn 1</title>
+</head>
+<body>
+    <h1>MongoDB HandsOn 1:</h1>
+    <ol>
+        <li> Query the collection "employee" and list all the documents</li>
+        <span>A: <cite>command:</cite>  db.employee.find({})    <cite>output: </cite>gives us a collection of 13 datas</span>
+        <li> Query the collection "employee" and list the employees who are having salary more than 30000</li>
+        <span>A: <cite>command: </cite> db.employee.find({"salary":{$gt:"30000"}})    <cite>output: </cite>gives us a collection of 6 datas</span>
+        <li> Query the collection "employee" and list the employees who are having experience more than 2 years.</li>
+        <span>A: <cite>command: </cite> db.employee.find({"overallExp":{$gt:"2"}})      <cite>output: </cite>shows no data since none of the employees have experience > 2 yrs</span>
+        <li> Query the collection "employee" and list the employees who are graduated after 2015 and having experience more than 1 year</li>
+        <span>A: <cite>command: </cite> db.employee.find({"yearGrad":{$gt:"2015"},"overallExp":{$gt:"1"}})      <cite>output: </cite>gives us a collection of 4 datas</span>
+        <li> Query the collection "employee" and update the salary of the employee whose salary is greater than 70000 to 65000.</li>
+        <span>A: <cite>command: </cite> db.employee.updateMany({"salary":{$gt:"70000"}},{$set:{"salary":"65000"}})      <cite>output: </cite>no output since no employess have salary > 70000</span>
+        <li> Delete all the documents from "employee" where last company is Y</li>
+        <span>A: <cite>command: </cite> db.employee.deleteMany({"lastCompany":"Y"})     <cite>output: </cite>deleted a collection of 6 datas</span>
+    </ol>
+</body>
+</html>
